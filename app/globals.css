@@ -1,0 +1,485 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: #000000;
+    font-family: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    /* Optimize scrolling performance */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+
+  /* Performance optimizations */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Typography improvements - Manrope font styling */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    color: white;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: rgb(209, 213, 219);
+    font-weight: 300;
+  }
+
+  .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  .text-4xl {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    font-weight: 300;
+  }
+
+  .text-5xl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 300;
+  }
+
+  .text-6xl {
+    font-size: 3.75rem;
+    line-height: 1.1;
+    font-weight: 300;
+  }
+}
+
+/* Optimized animations - reduced complexity */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+}
+
+/* Custom scrollbar - WHITE COLOR for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff transparent;
+}
+
+/* Selection colors */
+::selection {
+  background: hsl(262 83% 58% / 0.3);
+  color: hsl(var(--foreground));
+}
+
+/* Focus ring colors */
+.focus-visible\:ring-2:focus-visible {
+  --tw-ring-color: hsl(262 83% 58%);
+}
+
+/* Optimized button styles */
+.btn-primary {
+  background: linear-gradient(135deg, hsl(262 83% 58%), hsl(220 70% 50%));
+  border: none;
+  color: white;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 hsl(262 83% 58% / 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, hsl(262 83% 48%), hsl(220 70% 40%));
+  box-shadow: 0 6px 20px 0 hsl(262 83% 58% / 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, hsl(173 58% 39%), hsl(160 60% 45%));
+  border: none;
+  color: white;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 hsl(173 58% 39% / 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, hsl(173 58% 29%), hsl(160 60% 35%));
+  box-shadow: 0 6px 20px 0 hsl(173 58% 39% / 0.4);
+  transform: translateY(-1px);
+}
+
+/* Optimized gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(262 83% 58%), hsl(173 58% 39%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Optimized card styles */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px hsl(262 83% 58% / 0.1);
+}
+
+/* Performance optimizations for animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Reduce GPU usage for background elements */
+.bg-optimized {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Section backgrounds */
+.section-bg {
+  background: #000000;
+}
+
+.section-bg-muted {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Hero section specific optimizations */
+.hero-section-iframe {
+  /* Optimize iframe performance */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+  /* Ensure smooth rendering */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  /* Fix scrolling performance */
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Prevent repaints during scroll */
+  contain: layout style paint;
+  /* Optimize compositing */
+  isolation: isolate;
+}
+
+/* Smooth scrolling optimization for sections after hero */
+.section-after-hero {
+  scroll-margin-top: 2rem;
+}
+
+/* Spline container optimizations */
+.spline-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  /* GPU acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Hero section container optimizations */
+.hero-section-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  /* Ensure smooth scrolling */
+  scroll-behavior: smooth;
+  /* Optimize rendering */
+  contain: layout style;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize scrolling performance globally */
+* {
+  /* Reduce scroll jank */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for iframe interaction during scroll */
+.hero-section-iframe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Prevent interaction during scroll */
+  pointer-events: none;
+  /* Optimize compositing */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Content overlay */
+.content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+
+  /* Ensure touch targets are at least 44px */
+  .floating-nav button,
+  .floating-nav a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve text readability on mobile */
+  .hero-content {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Ensure proper spacing for mobile navbar */
+  .floating-nav {
+    margin: 0 12px;
+  }
+
+  /* Optimize iframe performance on mobile */
+  iframe {
+    will-change: auto;
+    transform: translateZ(0);
+  }
+}
+
+/* Improve mobile scrolling */
+@media (max-width: 768px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent zoom on input focus */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}

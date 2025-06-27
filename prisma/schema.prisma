@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String           @id @default(cuid())
+  name            String?
+  email           String?          @unique
+  credits         Int              @default(10)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  generatedAssets GeneratedAsset[]
+  payments        Payment[]
+  savedAssets     SavedAsset[]
+  promoCodeUsages PromoCodeUsage[]
+
+  @@map("users")
+}
+
+model GeneratedAsset {
+  id          String           @id @default(cuid())
+  userId      String
+  type        AssetType
+  prompt      String
+  status      GenerationStatus @default(PENDING)
+  url         String?
+  creditsUsed Int              @default(1)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  savedAsset  SavedAsset?
+
+  @@map("generated_assets")
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  userId    String
+  amount    Int
+  credits   Int
+  paymentId String   @unique
+  orderId   String   @unique
+  status    String
+  planId    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("payments")
+}
+
+model SavedAsset {
+  id               String         @id @default(cuid())
+  userId           String
+  generatedAssetId String         @unique
+  s3Url            String
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  generatedAsset   GeneratedAsset @relation(fields: [generatedAssetId], references: [id], onDelete: Cascade)
+  user             User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("saved_assets")
+}
+
+model PromoCodeUsage {
+  id           String   @id @default(cuid())
+  userId       String
+  promoCode    String
+  creditsAdded Int
+  source       String   @default("promo_code")
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, promoCode])
+  @@map("promo_code_usages")
+}
+
+enum AssetType {
+  VIDEO
+  IMAGE
+}
+
+enum GenerationStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
