@@ -21,8 +21,8 @@ export function LandingNavbar() {
       icon: <CreditCard className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "FAQ",
-      link: "#faq",
+      name: "Dashboard",
+      link: "/dashboard",
       icon: <HelpCircle className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
   ];

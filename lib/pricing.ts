@@ -3,64 +3,46 @@ export const PRICING_CONFIG = [
   {
     quality: "low",
     size: "1024x1024",
-    api_cost: 0.011,
-    price_with_50_margin: 0.0165,
     credits_to_charge: 2
   },
   {
     quality: "low",
     size: "1024x1536",
-    api_cost: 0.016,
-    price_with_50_margin: 0.024,
     credits_to_charge: 3
   },
   {
     quality: "low",
     size: "1536x1024",
-    api_cost: 0.016,
-    price_with_50_margin: 0.024,
     credits_to_charge: 3
   },
   {
     quality: "medium",
     size: "1024x1024",
-    api_cost: 0.042,
-    price_with_50_margin: 0.063,
     credits_to_charge: 7
   },
   {
     quality: "medium",
     size: "1024x1536",
-    api_cost: 0.063,
-    price_with_50_margin: 0.0945,
     credits_to_charge: 10
   },
   {
     quality: "medium",
     size: "1536x1024",
-    api_cost: 0.063,
-    price_with_50_margin: 0.0945,
     credits_to_charge: 10
   },
   {
     quality: "high",
     size: "1024x1024",
-    api_cost: 0.167,
-    price_with_50_margin: 0.2505,
     credits_to_charge: 25
   },
   {
     quality: "high",
     size: "1024x1536",
-    api_cost: 0.25,
-    price_with_50_margin: 0.375,
     credits_to_charge: 38
   },
   {
     quality: "high",
     size: "1536x1024",
-    api_cost: 0.25,
-    price_with_50_margin: 0.375,
     credits_to_charge: 38
   }
 ];
@@ -71,80 +53,60 @@ export const VIDEO_PRICING_CONFIG = [
     duration: "5s",
     resolution: "360p",
     motion: "normal",
-    api_cost: 0.30,
-    price_with_30_margin: 0.39,
     credits_to_charge: 39
   },
   {
     duration: "5s",
     resolution: "360p",
     motion: "smooth",
-    api_cost: 0.60,
-    price_with_30_margin: 0.78,
     credits_to_charge: 78
   },
   {
     duration: "8s",
     resolution: "360p",
     motion: "normal",
-    api_cost: 0.60,
-    price_with_30_margin: 0.78,
     credits_to_charge: 78
   },
   {
     duration: "5s",
     resolution: "540p",
     motion: "normal",
-    api_cost: 0.30,
-    price_with_30_margin: 0.39,
     credits_to_charge: 39
   },
   {
     duration: "5s",
     resolution: "540p",
     motion: "smooth",
-    api_cost: 0.60,
-    price_with_30_margin: 0.78,
     credits_to_charge: 78
   },
   {
     duration: "8s",
     resolution: "540p",
     motion: "normal",
-    api_cost: 0.60,
-    price_with_30_margin: 0.78,
     credits_to_charge: 78
   },
   {
     duration: "5s",
     resolution: "720p",
     motion: "normal",
-    api_cost: 0.40,
-    price_with_30_margin: 0.52,
     credits_to_charge: 52
   },
   {
     duration: "5s",
     resolution: "720p",
     motion: "smooth",
-    api_cost: 0.80,
-    price_with_30_margin: 1.04,
     credits_to_charge: 104
   },
   {
     duration: "8s",
     resolution: "720p",
     motion: "normal",
-    api_cost: 0.80,
-    price_with_30_margin: 1.04,
     credits_to_charge: 104
   },
   {
     duration: "5s",
     resolution: "1080p",
     motion: "normal",
-    api_cost: 0.80,
-    price_with_30_margin: 1.04,
     credits_to_charge: 104
   }
 ];

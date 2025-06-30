@@ -15,6 +15,22 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Adlume - Generate stunning product ads using AI',
   description: 'Generate stunning product ads using AI with Adlume',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.ico',
+        sizes: '16x16',
+        type: 'image/x-icon',
+      },
+      {
+        url: '/favicon.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

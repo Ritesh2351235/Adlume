@@ -22,8 +22,6 @@ export function HeroSection() {
       description="Transform your ideas into professional video advertisements with the power of AI. No design experience needed."
       ctaText="Get Started Free"
       ctaHref="/auth/signup"
-      secondaryCtaText="Watch Demo"
-      secondaryCtaHref="/demo"
     />
   );
 }

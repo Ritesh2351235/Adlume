@@ -59,11 +59,18 @@ export function HeroSectionFuturistic({
 
       {/* Bolt logo in top right corner */}
       <div className="absolute top-4 right-4 md:top-6 md:right-6 z-30">
-        <img
-          src="/bolt.png"
-          alt="Bolt Logo"
-          className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
-        />
+        <a
+          href="https://bolt.new/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block hover:scale-110 transition-transform duration-300"
+        >
+          <img
+            src="/bolt.png"
+            alt="Bolt Logo"
+            className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain cursor-pointer"
+          />
+        </a>
       </div>
 
       {/* Content */}

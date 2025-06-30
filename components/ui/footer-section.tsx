@@ -50,56 +50,41 @@ export function FooterSection() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Resources */}
           <div>
-            <h3 className="font-medium text-white mb-4">Company</h3>
+            <h3 className="font-medium text-white mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
-                  About
+                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Pricing Plans
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
-                  Blog
+                <Link href="/auth/signup" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Get Started
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
-                  Contact
+                <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                  Dashboard
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Legal */}
           <div>
-            <h3 className="font-medium text-white mb-4">Support</h3>
+            <h3 className="font-medium text-white mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/help" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="/docs" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <span className="text-gray-400 text-sm font-light">
                   Privacy Policy
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm font-light">
+                <span className="text-gray-400 text-sm font-light">
                   Terms of Service
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
