@@ -2,32 +2,37 @@
 
 Adlume is a modern, AI-powered advertising platform that enables users to generate high-quality images, videos, and complete ad campaigns using advanced artificial intelligence. Built with Next.js and featuring a comprehensive dashboard, Adlume makes professional advertising accessible to everyone.
 
-## ✨ Features
+# PROMO CODE - BOLTJUDGES100
 
-### 🎨 AI Content Generation
+## Demo Video
+[![Watch the video](https://img.youtube.com/vi/XW4f30NvJbw/maxresdefault.jpg)](https://www.youtube.com/watch?v=XW4f30NvJbw)
+
+## Features
+
+### AI Content Generation
 - **Image Generation**: Create stunning images with customizable quality settings (low, medium, high) and various sizes
 - **Video Generation**: Generate professional videos with different durations (5s, 8s), resolutions (360p-1080p), and motion settings
 - **Audio Generation**: Create custom audio content for your advertisements
 - **Audio-Video Merging**: Seamlessly combine audio and video content
 
-### 🎯 Smart Advertising Tools
+### Smart Advertising Tools
 - **Video Ads**: Create and manage video advertisement campaigns
 - **Mockups**: Generate product mockups for advertising materials
 - **Image Editor**: Built-in canvas-based image editing capabilities
 - **Asset Management**: Save and organize all your generated content
 
-### 💼 Business Features
+### Business Features
 - **Credit System**: Flexible credit-based pricing model
 - **Multiple Packages**: Starter, Professional, and Business tiers
 - **Billing Management**: Comprehensive billing and subscription management
 - **Usage Analytics**: Dashboard statistics and usage tracking
 
-### 🔐 User Management
+### User Management
 - **Secure Authentication**: Powered by Clerk authentication
 - **User Sync**: Automatic user synchronization across the platform
 - **Dashboard**: Personalized user dashboard with all tools and assets
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 14 with TypeScript
 - **Authentication**: Clerk
@@ -36,7 +41,7 @@ Adlume is a modern, AI-powered advertising platform that enables users to genera
 - **File Storage**: AWS S3 integration
 - **API**: RESTful API with Next.js API routes
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -65,9 +70,6 @@ Adlume is a modern, AI-powered advertising platform that enables users to genera
    AWS_REGION="your-aws-region"
    AWS_S3_BUCKET_NAME="your-s3-bucket-name"
 
-   # Other required variables
-   NEXTAUTH_SECRET="your-nextauth-secret"
-   NEXTAUTH_URL="http://localhost:3000"
    ```
 
 4. **Set up the database**
@@ -84,7 +86,7 @@ Adlume is a modern, AI-powered advertising platform that enables users to genera
 6. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 Adlume-final/
@@ -104,7 +106,7 @@ Adlume-final/
 └── types/                # TypeScript type definitions
 ```
 
-## 💰 Pricing Structure
+## Pricing Structure
 
 ### Image Generation Credits
 - **Low Quality**: 2-3 credits per image
@@ -120,7 +122,7 @@ Adlume-final/
 - **Professional**: $18 for 2,200 credits (Most Popular)
 - **Business**: $34 for 4,000 credits
 
-## 🎮 Usage
+## Usage
 
 1. **Sign Up**: Create an account using the secure Clerk authentication
 2. **Choose a Plan**: Select a credit package that fits your needs
@@ -156,15 +158,12 @@ npm run build
 npm start
 ```
 
-## 📄 License
+## License
 
 This project is proprietary software. All rights reserved.
 
-## 🤝 Contributing
 
-This is a private project. For any questions or support, please contact the development team.
-
-## 📧 Support
+## Support
 
 For technical support or questions about Adlume, please reach out to our support team.
 
